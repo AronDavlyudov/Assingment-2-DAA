@@ -1,6 +1,6 @@
 Kadane's Algorithm - Maximum Subarray Sum (with Position Tracking)
 
-This project is part of Assignment 2 for DAA (Design and Analysis of Algorithms) course. It includes a clean, testable, and performance-tracked implementation of Kadane's Algorithm using Java and Maven.
+This project is part of Assignment 2 for DAA (Design and Analysis of Algorithms) course. It includes a clean, testable, and performance-tracked implementation Kadane's Algorithm using Java and Maven.
 
 Algorithm Description
 
@@ -29,5 +29,6 @@ assignment2-kadanes-algorithm/\
 
 Version: v1.0
 
-Author:
+Author
 Aron Davlyudov
+[Grafs of speed](img.png)
