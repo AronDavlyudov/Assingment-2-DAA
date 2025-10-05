@@ -8,14 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="90f11690-552f-4d31-bc04-85c8a6502e0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/docs/Assingnment 2 DAA Aron Davlyudov.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/docs/Pair_Submission_Cross_Review_Report.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/algorithms/KadaneAlgorithm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/algorithms/KadaneAlgorithm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cli/BenchmarkRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cli/BenchmarkRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/metrics/PerformanceTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/metrics/PerformanceTracker.java" afterDir="false" />
-    </list>
+    <list default="true" id="90f11690-552f-4d31-bc04-85c8a6502e0b" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
