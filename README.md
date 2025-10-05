@@ -31,4 +31,4 @@ Version: v1.0
 
 Author
 Aron Davlyudov
-[Grafs of speed](img.png)
+[Grafs of speed](src/main/docs/PerformacePlot/img.png)

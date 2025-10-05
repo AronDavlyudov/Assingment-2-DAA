@@ -5,53 +5,35 @@ import metrics.PerformanceTracker;
 public class KadaneAlgorithm {
 
     public static class Result {
-        public int maxSum;
-        public int start;
-        public int end;
+        public long maxSum;
 
-        public Result(int maxSum, int start, int end) {
+        public Result(long maxSum) {
             this.maxSum = maxSum;
-            this.start = start;
-            this.end = end;
-        }
-
-        @Override
-        public String toString() {
-            return String.format("Max Sum: %d, Start Index: %d, End Index: %d", maxSum, start, end);
         }
     }
 
-    public static Result findMaxSubarray(int[] arr, PerformanceTracker tracker) {
-        if (arr == null || arr.length == 0) {
-            throw new IllegalArgumentException("Array must not be null or empty.");
-        }
+    public static Result findMaxSubarray(int[] arr, PerformanceTracker t) {
+        if (arr == null || arr.length == 0) return new Result(0);
+        if (t == null) t = new PerformanceTracker();
 
-        int maxSum = arr[0];
-        int currentSum = arr[0];
-        int start = 0;
-        int tempStart = 0;
-        int end = 0;
+        t.start();
 
-        tracker.memoryAllocations += 5;
+        long maxSum = arr[0];
+        long currentSum = arr[0];
+        t.addAccess(2); // accessing arr[0] twice
 
         for (int i = 1; i < arr.length; i++) {
-            tracker.arrayAccesses += 2;
-            tracker.comparisons++;
-
-            if (currentSum < 0) {
-                currentSum = arr[i];
-                tempStart = i;
-            } else {
-                currentSum += arr[i];
-            }
-
-            if (currentSum > maxSum) {
-                maxSum = currentSum;
-                start = tempStart;
-                end = i;
-            }
+            t.addAccess(1);
+            t.addCompare();
+            currentSum = Math.max(arr[i], currentSum + arr[i]);
+            maxSum = Math.max(maxSum, currentSum);
         }
 
-        return new Result(maxSum, start, end);
+        t.stop();
+        return new Result(maxSum);
+    }
+
+    public static Result findMaxSubarray(int[] arr) {
+        return findMaxSubarray(arr, new PerformanceTracker());
     }
 }
